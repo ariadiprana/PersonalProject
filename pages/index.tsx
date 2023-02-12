@@ -1,4 +1,8 @@
 import Head from "next/head";
+import { BsFillMoonStarsFill } from "react-icons/bs";
+import { AiFillLinkedin } from "react-icons/ai";
+import Image from "next/image";
+import deved from "../public/dev-ed-wave.png";
 
 export default function Home() {
   return (
@@ -9,7 +13,50 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main></main>
+      <main className="bg-white px-10">
+        <section className="min-h-screen">
+          <nav className="py-10 mb-12 flex justify-between">
+            <h1 className="text-xl">ariadiprana</h1>
+            <ul className="flex items-center">
+              <li>
+                <BsFillMoonStarsFill className="cursor-pointer text-2xl" />
+              </li>
+              <li>
+                <a
+                  className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-md ml-8"
+                  href="#"
+                >
+                  Resume
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div className="text-center p-10">
+            <h2 className="text-5xl py-2 text-blue-600 font-medium">
+              Ari Adiprana
+            </h2>
+            <h3 className="text-2xl py-2">IT Manager Enthusiast</h3>
+            <p className="text-md py-5 leading-8 text-gray-800">
+              A results-driven IT Manager with demonstrated success in the
+              design, development and deployment of large-scale enterprise
+              applications for the financial industry. Over couple of years of
+              experience developing software for large multi-national financial
+              organizations, credit card corporations and banking institutions.
+              History of building software systems with improved functionality
+              and productivity, consistently meeting critical requirements.
+            </p>
+          </div>
+          <div className="text-5xl flex justify-center gap-16 text-gray-600">
+            <a>
+              <AiFillLinkedin />
+            </a>
+          </div>
+          <div className="relative mx-auto bg-gradient-to-b from-blue-500 rounded-full w-80 h-80 mt-20 overflow-hidden">
+            <Image src={deved} layout="fill" objectFit="cover"></Image>
+          </div>
+        </section>
+      </main>
     </>
   );
 }
